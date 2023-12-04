@@ -85,6 +85,11 @@ public class RNNaverMapMarkerManager extends EventEmittableViewGroupManager<RNNa
         view.setRotation(rotation);
     }
 
+    @ReactProp(name = "hidden", defaultBoolean = true)
+    public void setHidden(RNNaverMapMarker view, boolean hidden) {
+        view.setHidden(hidden);
+    }
+
     @ReactProp(name = "flat", defaultBoolean = false)
     public void setFlat(RNNaverMapMarker view, boolean flat) {
         view.setFlat(flat);
