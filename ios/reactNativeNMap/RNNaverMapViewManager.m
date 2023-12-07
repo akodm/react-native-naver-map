@@ -109,6 +109,12 @@ RCT_CUSTOM_VIEW_PROPERTY(maxZoomLevel, NSNumber*, RNNaverMapView)
   view.mapView.maxZoomLevel = [json floatValue];
 }
 
+RCT_CUSTOM_VIEW_PROPERTY(logoMargin, UIEdgeInsets, RNNaverMapView)
+{
+  if (json == nil) return;
+  view.mapView.logoMargin = [RCTConvert UIEdgeInsets:json];
+}
+
 RCT_CUSTOM_VIEW_PROPERTY(scrollGesturesEnabled, BOOL, RNNaverMapView)
 {
   if (json == nil) view.mapView.scrollGestureEnabled = YES;
